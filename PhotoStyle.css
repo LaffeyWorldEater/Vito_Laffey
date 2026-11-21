@@ -1,0 +1,17 @@
+.Sdvig1 {margin: 0 100px 0 100px; width: auto;}
+footer {margin: 0 100px 0 100px; margin-top: 100; position: fixed; bottom: 0;}
+
+#bokove_paneli ul {list-style: none;
+    padding: 0;}
+.sidebar-left {position: fixed; top: 0; 
+    left: 0; height: 100%; 
+    width: 100px; z-index: 1000; 
+  overflow-y: auto; border-right: 3px solid red;
+}
+
+.sidebar-right {position: fixed; top: 0; 
+    right: 0; height: 100%; 
+    width: 100px; z-index: 1000; 
+    overflow-y: auto; border-left: 3px solid red;
+}
+
