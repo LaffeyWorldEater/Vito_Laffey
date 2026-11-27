@@ -1,2 +1,2 @@
 # Vito_Laffey
-PhotoChat
+PhotoChat - сайт для фотографов.
