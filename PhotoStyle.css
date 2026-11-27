@@ -1,17 +1,159 @@
-.Sdvig1 {margin: 0 100px 0 100px; width: auto;}
-footer {margin: 0 100px 0 100px; margin-top: 100; position: fixed; bottom: 0;}
-
-#bokove_paneli ul {list-style: none;
-    padding: 0;}
-.sidebar-left {position: fixed; top: 0; 
-    left: 0; height: 100%; 
-    width: 100px; z-index: 1000; 
-  overflow-y: auto; border-right: 3px solid red;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.sidebar-right {position: fixed; top: 0; 
-    right: 0; height: 100%; 
-    width: 100px; z-index: 1000; 
-    overflow-y: auto; border-left: 3px solid red;
+body {
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: linear-gradient(135deg, #eef2ff 0%, #f5f3ff 45%, #ecfeff 100%);
+  background-attachment: fixed;
+  color: #2f3a4a;
+  min-height: 100vh;
+  padding: 32px 20px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
 }
 
+/* --- Основной блок --- */
+.Sdvig1 {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 36px 40px;
+  max-width: 900px;
+  margin: 0 auto 28px;
+  border: 1px solid rgba(99, 102, 241, 0.12);
+  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.10);
+}
+
+.Sdvig1 h1 {
+  color: #4b56a8;
+  font-size: 28px;
+  line-height: 1.35;
+  font-weight: 700;
+  margin-bottom: 18px;
+  letter-spacing: 0.2px;
+}
+
+.Sdvig1 h2 {
+  color: #4b56a8;
+  font-size: 21px;
+  font-weight: 600;
+  margin-top: 26px;
+  margin-bottom: 10px;
+}
+
+.Sdvig1 p {
+  color: #55607a;
+  margin-bottom: 10px;
+}
+
+.Sdvig1 ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 6px;
+  color: #55607a;
+}
+
+.Sdvig1 ul li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 6px;
+}
+
+.Sdvig1 ul li::before {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 0.7em;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #8b93f8, #6ec6e0);
+}
+
+/* --- Боковые панели --- */
+#bokove_paneli {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.sidebar-left,
+.sidebar-right {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 20px 22px;
+  min-width: 230px;
+  border: 1px solid rgba(99, 102, 241, 0.12);
+  box-shadow: 0 8px 22px rgba(99, 102, 241, 0.08);
+}
+
+.sidebar-left ul,
+.sidebar-right ul {
+  list-style: none;
+}
+
+.sidebar-left li,
+.sidebar-right li {
+  margin-bottom: 6px;
+}
+
+.sidebar-left li:last-child,
+.sidebar-right li:last-child {
+  margin-bottom: 0;
+}
+
+.sidebar-left a,
+.sidebar-right a {
+  display: block;
+  padding: 9px 12px;
+  color: #5b6ee1;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.sidebar-left a:hover,
+.sidebar-right a:hover {
+  color: #3f4bce;
+  background: #eef2ff;
+}
+
+/* Правая панель — акцентные кнопки */
+.sidebar-right a {
+  text-align: center;
+}
+
+.sidebar-right a[href="reg.html"] {
+  background: linear-gradient(135deg, #7c8cf8, #6ec6e0);
+  color: #ffffff;
+}
+
+.sidebar-right a[href="reg.html"]:hover {
+  background: linear-gradient(135deg, #6b7cf5, #5bbad8);
+  color: #ffffff;
+}
+
+/* --- Подвал --- */
+footer {
+  text-align: center;
+  margin-top: 30px;
+  padding: 16px;
+  color: #8891a8;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+/* --- Адаптив --- */
+@media (max-width: 640px) {
+  .Sdvig1 { padding: 26px 22px; }
+  .Sdvig1 h1 { font-size: 22px; }
+  #bokove_paneli { flex-direction: column; }
+  .sidebar-left, .sidebar-right { width: 100%; }
+}
